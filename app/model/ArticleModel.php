@@ -18,7 +18,8 @@ class ArticleModel extends Model{
         return $this->db->query('
                     SELECT `article_id`, `title`, `text`, `date`, `categorie_id`
                     FROM `articles`
-        ');
+                    WHERE `url` = ?
+        ', array($url));
     }
 
     public function newArticle(){

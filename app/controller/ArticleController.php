@@ -9,6 +9,13 @@ class ArticleController extends AppController{
         $this->loadModel('Article');
     }
 
+    /* public function home(){
+        $articles = $this->modelName->getArticles();
+        return $this->render('global.home', [
+            "articles" => $articles,
+        ]);
+    } */
+
     public function home(){
         $articles = $this->modelName->getArticles();
         return $this->render('global.home', [
